@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import User from "../components/icons/User.astro";
+import SobreMi from "../components/SobreMi.astro";
+---
+
+<Layout
+  title="Porfolio de Mauricio Marín - Desarrollador y Programador Web."
+  description="Contrata a mauricio marin para crear tu aplicación web. Desarrollador Web, Especializado en crear aplicaciones web únicas"
+>
+  <main class="px-2">
+    <SectionContainer class="py-44 pb-24">
+      <img
+        class="rounded-full size-[120px] object-fill mb-4"
+        src="/public/Projects/imgmauricio.webp"
+        alt="maurico marin foto"
+      />
+      <h1
+        class="text-white text-3xl mg:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Mauricio <a
+          href="https://www.linkedin.com/in/mauricio-mar%C3%ADn-967a97265/"
+          target="_blank"
+          class="flex justify-center items-center"
+          rel="noopener"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span class="text-yellow-200"
+          >Soy un apasionado desarrollador frontend autodidacta</span
+        >, especializado en la creación de experiencias web atractivas y
+        funcionales. Disfruto convirtiendo ideas creativas en código eficiente y <span
+          class="text-yellow-200"
+          >siempre estoy buscando oportunidades para aprender y mejorar mis
+          habilidades."</span
+        >
+
+        >
+      </h2>
+      <nav class="flex gap-4 flex-wrap mt-8">
+        <SocialPill
+          href="https://www.linkedin.com/in/mauricio-mar%C3%ADn-967a97265/"
+        >
+          <LinkedIn class="size-4 md:-size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Mauricio-mr-Dev">
+          <GitHub class="size-4 md:-size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:maurimr465@gmail.com">
+          <Mail class="size-4 md:-size-6" />
+          Maurimr465@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8" />
+        Experiencia en el Desarrollo Frontend
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <User class="size-8" />
+        Sobre mí
+      </h2>
+      <SobreMi />
+    </SectionContainer>
+  </main>
+</Layout>

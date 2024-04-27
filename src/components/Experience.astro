@@ -1,0 +1,23 @@
+---
+import ItemExperience from './ItemExperiencie.astro'
+const EXPERIENCIE = [
+    {
+        date: 'Actualmente...',
+        title :'Proyecto de Creación de Sitio Web de Streaming Internacional  -  Mis Emisoras Inc',
+        description:'Desempeñé un papel fundamental en el diseño ydesarrollo de interfaces frontend para un proyecto en curso de creación de una plataforma web de streaming internacional.',
+        link:'https://github.com/easysoftwaredesignmexico/miemisoras-website',
+
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">                     
+    {
+        EXPERIENCIE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ItemExperience {...experience}/>
+            </li>
+        ))
+    }
+  
+</ol>
+

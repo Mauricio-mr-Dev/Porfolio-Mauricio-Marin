@@ -1,41 +1,53 @@
 ---
 
-
 ---
 
-<header id="header"class="flex  z-10 justify-center items-center py-5 w-full xl:w-[1120px] mx-auto bg-slate-600 rounded-full fixed top-5 left-0 right-0" >
+<header
+  id="header"
+  class="flex z-10 justify-center items-center py-4 w-full xl:w-[880px] mx-auto bg-slate-600 rounded-full fixed top-5 left-0 right-0"
+>
+  <nav class="flex flex-row gap-x-4 sm:gap-x-10">
+    <a class="text-xl hover:text-yellow-500" href="#"
+      >Inicio<a>
+        <a class="text-xl hover:text-yellow-500" href="#experiencia"
+          >Experiencia<a>
+            <a class="text-xl hover:text-yellow-500" href="#proyectos"
+              >Proyectos<a>
+                <a class="text-xl hover:text-yellow-500" href="#sobre-mi"
+                  >Sobre mí<a>
+                    <a
+                      class="text-xl hover:text-yellow-500"
+                      href="mailto:maurimr465@gmail.com">Contacto</a
+                    >
+                  </a>
+                </a>
 
-  <nav class="flex flex-row gap-x-4 sm:gap-x-10 ">
-    <a class="text-xl hover:text-yellow-500" href="#">Inicio<a>
-    <a class="text-xl hover:text-yellow-500" href="#experiencia">Experiencia<a>
-    <a class="text-xl hover:text-yellow-500" href="#proyectos">Proyectos<a>
-    <a class="text-xl hover:text-yellow-500" href="#sobre-mi">Sobre mí<a>
-    <a class="text-xl hover:text-yellow-500" href="mailto:maurimr465@gmail.com">Contacto</a>
+                <style>
+                  @media (max-width: 768px) {
+                    nav {
+                      padding: -10px;
+                    }
+                    nav a {
+                      font-size: 10px;
+                    }
+                  }
+                </style>
+
+                <script>
+                  const header = document.querySelector("header")!;
+                  function cambiarColorEncabezado() {
+                    if (window.scrollY > 0) {
+                      header.style.backgroundColor = "#3182ce";
+                    } else {
+                      header.style.backgroundColor = "#475569";
+                    }
+                  }
+                  window.addEventListener("scroll", cambiarColorEncabezado);
+                </script></a
+              ></a
+            ></a
+          ></a
+        ></a
+      ></a>
   </nav>
 </header>
-
-<style>
-
-@media (max-width: 768px){
-    nav{
-      padding: -10px;
-      
-    }
-    nav a{
-      font-size: 10px;
-    }
-}
-
-</style>
-
-<script>  
-      const header = document.querySelector("header")!;
-    function cambiarColorEncabezado() {
-      if (window.scrollY > 0) {
-        header.style.backgroundColor = "#3182ce"; 
-      } else {
-        header.style.backgroundColor = "#475569"; 
-      }
-    }
-    window.addEventListener("scroll", cambiarColorEncabezado);
-</script>

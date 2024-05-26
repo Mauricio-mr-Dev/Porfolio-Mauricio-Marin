@@ -4,7 +4,7 @@
 
 <header
   id="header"
-  class="flex z-10 justify-center items-center py-4 w-full xl:w-[880px] mx-auto bg-slate-600 rounded-full fixed top-5 left-0 right-0"
+  class="flex z-10 justify-center items-center py-3 w-full xl:w-[880px] mx-auto bg-slate-600 rounded-full fixed top-5 left-0 right-0"
 >
   <nav class="flex flex-row gap-x-4 sm:gap-x-10">
     <a class="text-xl hover:text-yellow-500" href="#"
@@ -24,30 +24,55 @@
 
                 <style>
                   @media (max-width: 768px) {
+                    header {
+                      width: 90%;
+                    }
                     nav {
-                      padding: -10px;
+                      padding: 0px;
+                      gap: 12px;
                     }
                     nav a {
-                      font-size: 10px;
+                      font-size: 8px;
+                      padding: 0px;
                     }
                   }
                 </style>
 
                 <script>
+                  
                   const header = document.querySelector("header")!;
+
+                  let scrollTimer = 0;
+
                   function cambiarColorEncabezado() {
                     if (window.scrollY > 0) {
                       header.style.backgroundColor = "#3182ce";
+                      header.style.display = "flex";
                     } else {
-                      header.style.backgroundColor = "#475569";
+                      header.style.backgroundColor = "transparent";
+                      header.style.display = "flex";
                     }
                   }
                   window.addEventListener("scroll", cambiarColorEncabezado);
+
+                  function usuarioQuieto() {
+                    header.style.display = "none";
+                  }
+
+                  window.addEventListener("scroll", () => {
+                    cambiarColorEncabezado();
+                    clearTimeout(scrollTimer);
+                    window.scrollY > 10
+                      ? (scrollTimer = setTimeout(usuarioQuieto, 3000))
+                      : "";
+                  });
+
                 </script></a
               ></a
             ></a
           ></a
         ></a
-      ></a>
+      ></a
+    >
   </nav>
 </header>

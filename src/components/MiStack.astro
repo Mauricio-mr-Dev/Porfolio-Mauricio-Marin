@@ -1,0 +1,55 @@
+---
+const STACK = [
+  {
+    icon: "/Stack/html-5.webp",
+    name: "Html",
+  },
+  {
+    icon: "/Stack/css-3.webp",
+    name: "Css",
+  },
+  {
+    icon: "/Stack/js.webp",
+    name: "JavaScript",
+  },
+  {
+    icon: "/Stack/typescript.webp",
+    name: "TypeScript",
+  },
+  {
+    icon: "/Stack/react.webp",
+    name: "React",
+  },
+  {
+    icon: "/Stack/astro.webp",
+    name: "Astro",
+  },
+  {
+    icon: "/Stack/social.webp",
+    name: "Git",
+  },
+  {
+    icon: "/Stack/github.webp",
+    name: "GitHub",
+  },
+  {
+    icon: "/Stack/vite.webp",
+    name: "Vite",
+  },
+  {
+    icon: "/Stack/firebase.webp",
+    name: "FireBase",
+  },
+];
+---
+
+<section class="w-[80%] my-8 mx-auto flex flex-wrap items-center gap-x-16">
+  {
+    STACK.map(({ icon, name }) => (
+      <article class="mt-10 flex flex-col items-center justify-center gap-y-2 transition-transform  hover:scale-105">
+        <img src={icon} alt={name} class="w-[100px]" />
+        <span class="font-semibold">{name}</span>
+      </article>
+    ))
+  }
+</section>

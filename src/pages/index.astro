@@ -12,6 +12,7 @@ import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
 import User from "../components/icons/User.astro";
 import SobreMi from "../components/SobreMi.astro";
+import MiStack from "../components/MiStack.astro";
 ---
 
 <Layout
@@ -44,9 +45,8 @@ import SobreMi from "../components/SobreMi.astro";
         funcionales. Disfruto convirtiendo ideas creativas en código eficiente y <span
           class="text-yellow-200"
           >siempre estoy buscando oportunidades para aprender y mejorar mis
-          habilidades</span>."
-
-        
+          habilidades</span
+        >."
       </h2>
       <nav class="flex gap-4 flex-wrap mt-8">
         <SocialPill
@@ -80,6 +80,16 @@ import SobreMi from "../components/SobreMi.astro";
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer>
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Mi stack
+      </h2>
+
+<MiStack/>
+
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

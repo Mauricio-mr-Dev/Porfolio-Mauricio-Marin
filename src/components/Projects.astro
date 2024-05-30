@@ -3,6 +3,7 @@ import Html from "./icons/Html.astro";
 import Css from "./icons/Css.astro";
 import React from "./icons/React.astro";
 import JavaScript from './icons/JavaScript.astro'
+import Firebase from "./icons/firebase.astro";
 
 const TAGS = {
   HTML: {
@@ -26,7 +27,14 @@ const TAGS = {
     name:'JavaScript',
     class: "bg-black text-white",
     icon:JavaScript,
+  },
+  FIREBASE :{
+    name:'Firebase',
+    class : "bg-black text-white",
+    icon : Firebase
   }
+
+
 };
 
 const PROJECTS = [
@@ -36,7 +44,7 @@ const PROJECTS = [
     description:
       "Es una emocionante plataforma web donde puedes comprar, vender y cambiar productos de diferentes categorías de forma fácil y segura. Con solo registrarte a través de Google, podrás empezar a subir tus artículos y explorar las ofertas de otros usuarios. Ya sea que busques una gran oferta o quieras deshacerte de algo que ya no necesitas.",
     image: "/projects/portaldeltrueke.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
+    tags: [TAGS.REACT,TAGS.FIREBASE],
     verMas: "https://truequeando.netlify.app/",
     github: "https://github.com/Mauricio-mr-Dev/Cambalaches",
   },
@@ -44,7 +52,7 @@ const PROJECTS = [
   {
     title: "IP geolocation",
     description:
-      "Geolocalizador de IP: Explora el mundo digital. Descubre la ubicación geográfica de cualquier dirección IP con precisión y facilidad. Integra esta herramienta en tus aplicaciones web para identificar la ubicación del usuario con solo unos clics. ¡Conoce continentes, países, ciudades y más con solo ingresar una dirección IP",
+      "Geolocalizador de IP: Explora el mundo digital. Descubre la ubicación geográfica de cualquier dirección IP con precisión y facilidad. Integra esta herramienta en tus aplicaciones web para identificar la ubicación del usuario.",
     image: "/projects/ip-geolocation.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
     verMas: "https://ip-geolocation-mr.netlify.app/",

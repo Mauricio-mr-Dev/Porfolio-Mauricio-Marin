@@ -4,6 +4,11 @@ import Css from "./icons/Css.astro";
 import React from "./icons/React.astro";
 import JavaScript from './icons/JavaScript.astro'
 import Firebase from "./icons/firebase.astro";
+import Php from "./icons/php.astro";
+import MySql from "./icons/MySql.astro";
+import AstroIcon from './icons/AstroIcon.astro'
+import Tailwind from './icons/Tailwind.astro'
+
 
 const TAGS = {
   HTML: {
@@ -18,6 +23,12 @@ const TAGS = {
     icon: Css,
   },
 
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-black text-white",
+    icon: Tailwind,
+  },
+
   REACT: {
     name: "React",
     class: "bg-black text-white",
@@ -28,12 +39,27 @@ const TAGS = {
     class: "bg-black text-white",
     icon:JavaScript,
   },
+
+  ASTRO: {
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroIcon,
+  },
   FIREBASE :{
     name:'Firebase',
     class : "bg-black text-white",
     icon : Firebase
+  },
+  PHP:{
+    name:'Php',
+    class : "bg-black text-white",
+    icon : Php
+  },
+  MYSQL:{
+    name:'MySql',
+    class : "bg-black text-white",
+    icon : MySql
   }
-
 
 };
 
@@ -48,34 +74,56 @@ const PROJECTS = [
     verMas: "https://truequeando.netlify.app/",
     github: "https://github.com/Mauricio-mr-Dev/Cambalaches",
   },
+  {
+    title: "EL paisa comidas rapidas",
+    description:
+      "El Paisa Comidas Rápidas es una plataforma web de pedidos de comida rápida diseñada para proporcionar una experiencia ágil y conveniente tanto para usuarios como administradores. Desarrollada con HTML, CSS y PHP,y MySQL, esta plataforma ofrece la posibilidad de registrarse, realizar pedidos y gestionarlos de manera eficiente. Con roles diferenciados entre usuarios y administradores. Esta fue desarrollada en un proyecto escolar.",
+    tags: [TAGS.HTML,TAGS.CSS, TAGS.PHP, TAGS.MYSQL ],
+    image:'./projects/paisaComidas.webp',
+    github: "https://github.com/Mauricio-mr-Dev/El-paisa-comidas-rapidas",
+  },
+
+  {
+    title: "Imys oficial WebSite",
+    description:
+      "Para mi cartera, desarrollé un sitio web para una empresa de aire acondicionado como parte de un proyecto freelance. Me enfoqué en diseñar una experiencia de usuario atractiva y fácil de usar, especialmente en la parte responsive. Destacando los servicios y productos de la empresa,",
+    image: "/projects/Imys.webp",
+    tags: [TAGS.ASTRO,TAGS.TAILWIND],  
+    github: "https://github.com/easysoftwaredesignmexico/imys-officialwebsite",
+  },
 
   {
     title: "IP geolocation",
     description:
-      "Geolocalizador de IP: Explora el mundo digital. Descubre la ubicación geográfica de cualquier dirección IP con precisión y facilidad. Integra esta herramienta en tus aplicaciones web para identificar la ubicación del usuario.",
+      "Geolocalizador de IP. Descubre la ubicación geográfica de cualquier dirección IP con precisión y facilidad. Integra esta herramienta en tus aplicaciones web para identificar la ubicación del usuario.",
     image: "/projects/ip-geolocation.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JS],
     verMas: "https://ip-geolocation-mr.netlify.app/",
     github: "https://github.com/Mauricio-mr-Dev/Geolocation-IP",
   },
-  {
-    title: "Giff Expert App",
-    description:
-      "Esta página web ofrece una experiencia interactiva para buscar y descargar GIFs de manera rápida y sencilla. Utilizando la API de GIF, los usuarios pueden explorar una amplia variedad de GIFs, seleccionar sus favoritos y descargarlos.",
-    image: "/projects/giif-expert.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
-    verMas: "https://gifs-randoms.netlify.app/",
-    github: "https://github.com/Mauricio-mr-Dev/Web-Reminders",
-  },
-  {
-    title: "Pokedex",
-    description:
-      "Explora el mundo Pokémon. Descubre una lista interminable de Pokémon, con nombres, IDs e imágenes. Navega sin problemas con el scroll infinito. Haz clic en cada Pokémon para obtener detalles sobre sus habilidades y tipo. Además, disfruta del modo oscuro para una experiencia visual más cómoda.",
-    image: "/projects/Pokedex.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
-    verMas: "https://pokedex-mauricomr.netlify.app/",
-    github: "https://github.com/Mauricio-mr-Dev/Poke-Api",
-  }
+
+  
+
+
+
+  // {
+  //   title: "Giff Expert App",
+  //   description:
+  //     "Esta página web ofrece una experiencia interactiva para buscar y descargar GIFs de manera rápida y sencilla. Utilizando la API de GIF, los usuarios pueden explorar una amplia variedad de GIFs, seleccionar sus favoritos y descargarlos.",
+  //   image: "/projects/giif-expert.webp",
+  //   tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
+  //   verMas: "https://gifs-randoms.netlify.app/",
+  //   github: "https://github.com/Mauricio-mr-Dev/Web-Reminders",
+  // },
+  // {
+  //   title: "Pokedex",
+  //   description:
+  //     "Explora el mundo Pokémon. Descubre una lista interminable de Pokémon, con nombres, IDs e imágenes. Navega sin problemas con el scroll infinito. Haz clic en cada Pokémon para obtener detalles sobre sus habilidades y tipo. Además, disfruta del modo oscuro para una experiencia visual más cómoda.",
+  //   image: "/projects/Pokedex.webp",
+  //   tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
+  //   verMas: "https://pokedex-mauricomr.netlify.app/",
+  //   github: "https://github.com/Mauricio-mr-Dev/Poke-Api",
+  // }
 ];
 ---
 

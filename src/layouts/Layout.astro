@@ -1,59 +1,68 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 
 interface Props {
-	title: string;
-	description :string;
+  title: string;
+  description: string;
 }
 
-const { description,title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/projects/image.webp" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body >
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-		<Header />
-		<slot/>
-		<Footer />
-	
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/projects/image.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
+
 <style is:global>
-	:root {
-		color-scheme: light dark;
-		
-	}
-	html {	
-		font-family: 'Onest Variable',system-ui, sans-serif;	
-		scroll-behavior: smooth;	
-	}
+  :root {
+    color-scheme: light dark;
+  }
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
 
-	body{
-		
-		background: #050505;
-		display: flex;
-		flex-direction: column;
-		min-height:100vh;
-	
-	}
+  body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1a1a;
+    background: radial-gradient(
+      ellipse 80% 80% at 50% -20%,
+      rgba(120, 119, 198, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+  }
 
-	@media (prefers-reduced-motion: reduce){
-		
-		html{
-			scroll-behavior: auto;
-		}
-		
-	}
-	</style>
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 6px;
+    }
+  }
+</style>

@@ -8,6 +8,7 @@ import Php from "./icons/php.astro";
 import MySql from "./icons/MySql.astro";
 import AstroIcon from './icons/AstroIcon.astro'
 import Tailwind from './icons/Tailwind.astro'
+import ReactRouter from "./icons/React-router.astro";
 
 
 const TAGS = {
@@ -59,7 +60,12 @@ const TAGS = {
     name:'MySql',
     class : "bg-black text-white",
     icon : MySql
-  }
+  },
+  REACTROUTER: {
+    name: "React Router Dom",
+    class: "bg-black text-white",
+    icon: ReactRouter,
+  },
 
 };
 
@@ -70,7 +76,7 @@ const PROJECTS = [
     description:
       "Es una emocionante plataforma web donde puedes comprar, vender y cambiar productos de diferentes categorías de forma fácil y segura. Con solo registrarte a través de Google, podrás empezar a subir tus artículos y explorar las ofertas de otros usuarios. Ya sea que busques una gran oferta o quieras deshacerte de algo que ya no necesitas.",
     image: "/projects/portaldeltrueke.webp",
-    tags: [TAGS.REACT,TAGS.FIREBASE],
+    tags: [TAGS.REACT,TAGS.FIREBASE, TAGS.REACTROUTER],
     verMas: "https://truequeando.netlify.app/",
     github: "https://github.com/Mauricio-mr-Dev/Cambalaches",
   },

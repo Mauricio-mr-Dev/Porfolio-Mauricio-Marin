@@ -9,6 +9,10 @@ const STACK = [
     name: "Css",
   },
   {
+    icon: "/Stack/tailwind.webp",
+    name: "Tailwind CSS",
+  },
+  {
     icon: "/Stack/js.webp",
     name: "JavaScript",
   },
@@ -46,8 +50,8 @@ const STACK = [
 <section class="w-[80%] my-8 mx-auto flex flex-wrap items-center gap-x-16">
   {
     STACK.map(({ icon, name }) => (
-      <article class="mt-10 flex flex-col items-center justify-center gap-y-2 transition-transform  hover:scale-105">
-        <img src={icon} alt={name} class="w-[100px]" />
+      <article class="mt-10 flex flex-col items-center justify-center gap-y-2 transition-transform hover:scale-105">
+        <img src={icon} alt={name} class="w-[100px] rounded-xl" />
         <span class="font-semibold">{name}</span>
       </article>
     ))

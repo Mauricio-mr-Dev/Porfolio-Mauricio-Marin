@@ -2,14 +2,15 @@
 import Html from "./icons/Html.astro";
 import Css from "./icons/Css.astro";
 import React from "./icons/React.astro";
-import JavaScript from './icons/JavaScript.astro'
+import JavaScript from "./icons/JavaScript.astro";
 import Firebase from "./icons/firebase.astro";
 import Php from "./icons/php.astro";
 import MySql from "./icons/MySql.astro";
-import AstroIcon from './icons/AstroIcon.astro'
-import Tailwind from './icons/Tailwind.astro'
+import AstroIcon from "./icons/AstroIcon.astro";
+import Tailwind from "./icons/Tailwind.astro";
 import ReactRouter from "./icons/React-router.astro";
-
+import SectionContainer from "./SectionContainer.astro";
+import Mas from "./icons/Mas.astro";
 
 const TAGS = {
   HTML: {
@@ -35,10 +36,10 @@ const TAGS = {
     class: "bg-black text-white",
     icon: React,
   },
-  JS:{
-    name:'JavaScript',
+  JS: {
+    name: "JavaScript",
     class: "bg-black text-white",
-    icon:JavaScript,
+    icon: JavaScript,
   },
 
   ASTRO: {
@@ -46,47 +47,36 @@ const TAGS = {
     class: "bg-black text-white",
     icon: AstroIcon,
   },
-  FIREBASE :{
-    name:'Firebase',
-    class : "bg-black text-white",
-    icon : Firebase
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-black text-white",
+    icon: Firebase,
   },
-  PHP:{
-    name:'Php',
-    class : "bg-black text-white",
-    icon : Php
+  PHP: {
+    name: "Php",
+    class: "bg-black text-white",
+    icon: Php,
   },
-  MYSQL:{
-    name:'MySql',
-    class : "bg-black text-white",
-    icon : MySql
+  MYSQL: {
+    name: "MySql",
+    class: "bg-black text-white",
+    icon: MySql,
   },
   REACTROUTER: {
     name: "React Router Dom",
     class: "bg-black text-white",
     icon: ReactRouter,
   },
-
 };
 
 const PROJECTS = [
-
-{
+  {
     title: "EL portal del trueque",
     description:
-      "Es una emocionante plataforma web donde puedes comprar, vender y cambiar productos de diferentes categorías de forma fácil y segura. Con solo registrarte a través de Google, podrás empezar a subir tus artículos y explorar las ofertas de otros usuarios. Ya sea que busques una gran oferta o quieras deshacerte de algo que ya no necesitas.",
+      "Es una plataforma web donde puedes comprar, vender y cambiar productos de diferentes categorías de forma fácil y segura. Con solo registrarte, podrás publicar tus artículos y explorar las ofertas de otros usuarios. Ya sea que busques una gran oferta o quieras deshacerte de algo que ya no necesitas.",
     image: "/projects/portaldeltrueke.webp",
-    tags: [TAGS.REACT,TAGS.FIREBASE, TAGS.REACTROUTER],
+    tags: [TAGS.REACT, TAGS.REACTROUTER, TAGS.FIREBASE],
     verMas: "https://truequeando.netlify.app/",
-    github: "https://github.com/Mauricio-mr-Dev/Cambalaches",
-  },
-  {
-    title: "EL paisa comidas rapidas",
-    description:
-      "El Paisa Comidas Rápidas es una plataforma web de pedidos de comida rápida diseñada para proporcionar una experiencia ágil y conveniente tanto para usuarios como administradores. Desarrollada con HTML, CSS y PHP,y MySQL, esta plataforma ofrece la posibilidad de registrarse, realizar pedidos y gestionarlos de manera eficiente. Con roles diferenciados entre usuarios y administradores. Esta fue desarrollada en un proyecto escolar.",
-    tags: [TAGS.HTML,TAGS.CSS, TAGS.PHP, TAGS.MYSQL ],
-    image:'./projects/paisaComidas.webp',
-    github: "https://github.com/Mauricio-mr-Dev/El-paisa-comidas-rapidas",
   },
 
   {
@@ -94,8 +84,16 @@ const PROJECTS = [
     description:
       "Para mi cartera, desarrollé un sitio web para una empresa de aire acondicionado como parte de un proyecto freelance. Me enfoqué en diseñar una experiencia de usuario atractiva y fácil de usar, especialmente en la parte responsive. Destacando los servicios y productos de la empresa,",
     image: "/projects/Imys.webp",
-    tags: [TAGS.ASTRO,TAGS.TAILWIND],  
-    github: "https://github.com/easysoftwaredesignmexico/imys-officialwebsite",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND],
+    verMas: "https://imys.mx",
+  },
+  {
+    title: "EL paisa comidas rapidas",
+    description:
+      "Es una plataforma de pedidos de comida rápida, Desarrollada con HTML, CSS y PHP,y MySQL, esta plataforma ofrece la posibilidad de registrarse, realizar pedidos y gestionarlos de manera eficiente. Con roles diferenciados entre usuarios y administradores. Esta fue desarrollada en un proyecto escolar.",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
+    image: "./projects/paisaComidas.webp",
+    github: "https://github.com/Mauricio-mr-Dev/El-paisa-comidas-rapidas",
   },
 
   {
@@ -108,116 +106,249 @@ const PROJECTS = [
     github: "https://github.com/Mauricio-mr-Dev/Geolocation-IP",
   },
 
-  
-
-
-
-  // {
-  //   title: "Giff Expert App",
-  //   description:
-  //     "Esta página web ofrece una experiencia interactiva para buscar y descargar GIFs de manera rápida y sencilla. Utilizando la API de GIF, los usuarios pueden explorar una amplia variedad de GIFs, seleccionar sus favoritos y descargarlos.",
-  //   image: "/projects/giif-expert.webp",
-  //   tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
-  //   verMas: "https://gifs-randoms.netlify.app/",
-  //   github: "https://github.com/Mauricio-mr-Dev/Web-Reminders",
-  // },
-  // {
-  //   title: "Pokedex",
-  //   description:
-  //     "Explora el mundo Pokémon. Descubre una lista interminable de Pokémon, con nombres, IDs e imágenes. Navega sin problemas con el scroll infinito. Haz clic en cada Pokémon para obtener detalles sobre sus habilidades y tipo. Además, disfruta del modo oscuro para una experiencia visual más cómoda.",
-  //   image: "/projects/Pokedex.webp",
-  //   tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
-  //   verMas: "https://pokedex-mauricomr.netlify.app/",
-  //   github: "https://github.com/Mauricio-mr-Dev/Poke-Api",
-  // }
+  {
+    title: "Giff Expert App",
+    description:
+      "Esta página web ofrece una experiencia interactiva para buscar y descargar GIFs de manera rápida y sencilla. Utilizando la API de GIF, los usuarios pueden explorar una amplia variedad de GIFs, seleccionar sus favoritos y descargarlos.",
+    image: "/projects/giif-expert.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
+    verMas: "https://gifs-randoms.netlify.app/",
+    github: "https://github.com/Mauricio-mr-Dev/Web-Reminders",
+  },
+  {
+    title: "Pokedex",
+    description:
+      "Explora el mundo Pokémon. Descubre una lista interminable de Pokémon, con nombres, IDs e imágenes. Navega sin problemas con el scroll infinito. Haz clic en cada Pokémon para obtener detalles sobre sus habilidades y tipo. Además, disfruta del modo oscuro para una experiencia visual más cómoda.",
+    image: "/projects/Pokedex.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT],
+    verMas: "https://pokedex-mauricomr.netlify.app/",
+    github: "https://github.com/Mauricio-mr-Dev/Poke-Api",
+  },
 ];
+
+const proyectos = PROJECTS.slice(0, 3);
+const nextProyectos = PROJECTS.slice(3, PROJECTS.length);
 ---
 
 {
-  PROJECTS.map((proyecto) => (
-    <article id="article" class="flex gap-x-8  mb-10">
-      <img
-        class="w-[550px] h-[350px] rounded-xl object-cover hover:scale-105 transition duration-1000 ease-out"
-        src={proyecto.image}
-        alt={`Captura de pantalla del  proyecto ${proyecto.title}`}
-      />
+  proyectos.map((proyecto) => (
+    <>
+      <>
+        <article
+          id="article"
+          class="flex gap-x-8  mb-10 hover:scale-105 transition duration-1000 ease-out"
+        >
+          <img
+            class="w-[350px]  md:w-[450px] h-[350px] rounded-xl object-cover  transition duration-1000 ease-out "
+            src={proyecto.image}
+            alt={`Captura de pantalla del proyecto ${proyecto.title}`}
+          />
 
-      <section class="flex flex-col gap-3 justify-center ">
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
-          {proyecto.title}
-        </h3>
+          <section class="flex flex-col gap-3 justify-center ">
+            <h3 class="text-2xl font-bold text-yellow-200 mb-2 dark:text-[#EAB308]">
+              {proyecto.title}
+            </h3>
 
-        <ul class="flex gap-x-2 flex-row">
-          {proyecto.tags.map((tag) => (
-            <li class="rounded-full border border-gray-200">
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-        <p class="text-lg mb-2 text-pretty ">{proyecto.description}</p>
+            <ul class="flex gap-x-2 flex-row flex-wrap gap-y-3">
+              {proyecto.tags.map((tag) => (
+                <li class="flex  rounded-full border-2 border-gray-200c dark:border-none px-2 py-1 hover:cursor-pointer hover:translate-y-[-10px] transition duration-500 ease-out ">
+                  <span
+                    class={`flex gap-x-3 items-center rounded-full text-sm ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-5" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p class="text-lg mb-2 text-pretty ">{proyecto.description}</p>
 
-        <section class="flex gap-x-5">
-          <article>
-            {proyecto.verMas && (
-              <a
-                target="_blank"
-                href={proyecto.verMas}
-                class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-              >
-                <svg
-                  class="size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+            <section class="flex gap-x-5">
+              <article>
+                {proyecto.verMas && (
+                  <a
+                    target="_blank"
+                    href={proyecto.verMas}
+                    class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+                  >
+                    <svg
+                      class="size-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                    Preview
+                  </a>
+                )}
+              </article>
+
+              {proyecto.github && (
+                <a
+                  target="_blank"
+                  href={proyecto.github}
+                  class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
                 >
-                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                </svg>
-                Preview
-              </a>
-            )}
-          </article>
-
-          {proyecto.github && (
-            <a
-              target="_blank"
-              href={proyecto.github}
-              class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-            >
-              <svg
-                class="size-6"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-              </svg>
-              Code
-            </a>
-          )}
-        </section>
-      </section>
-    </article>
+                  <svg
+                    class="size-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                  </svg>
+                  Code
+                </a>
+              )}
+            </section>
+          </section>
+        </article>
+      </>
+    </>
   ))
 }
+<button
+  id="btn-modal"
+  class="flex justify-center w-[100%] mt-16 hover:scale-110 transition duration-700 ease-out"
+>
+  <img
+    src="./Mas/mas.png"
+    alt="imagen para mostrar mas proyectos"
+    class="w-8 lg:w-12"
+  />
+</button>
+
+<SectionContainer
+  class="w-screen hidden overflow-y-clip p-6 mt-8"
+  id="modal-project"
+>
+  <div class="w-[100%] flex relative">
+    <button
+      id="btn-cerrar-modal"
+      class="w-[100%] m-5 flex justify-center text-4xl sticky mb-14">✕</button
+    >
+  </div>
+  {
+    nextProyectos.map((proyecto) => (
+      <>
+        <article
+          id="article"
+          class="flex gap-x-8  mb-10 hover:scale-105 transition duration-1000 ease-out"
+        >
+          <img
+            class="w-[350px]  md:w-[450px] h-[350px] rounded-xl object-cover  transition duration-1000 ease-out "
+            src={proyecto.image}
+            alt={`Captura de pantalla del proyecto ${proyecto.title}`}
+          />
+
+          <section class="flex flex-col gap-3 justify-center ">
+            <h3 class="text-2xl font-bold text-yellow-200 mb-2 dark:text-[#EAB308]">
+              {proyecto.title}
+            </h3>
+
+            <ul class="flex gap-x-2 flex-row">
+              {proyecto.tags.map((tag) => (
+                <li class="rounded-full border-2 border-gray-200c dark:border-none px-2 py-1 hover:cursor-pointer hover:translate-y-[-10px] transition duration-500 ease-out ">
+                  <span
+                    class={`flex gap-x-3 items-center rounded-full text-sm ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-5" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p class="text-lg mb-2 text-pretty ">{proyecto.description}</p>
+
+            <section class="flex gap-x-5">
+              <article>
+                {proyecto.verMas && (
+                  <a
+                    target="_blank"
+                    href={proyecto.verMas}
+                    class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+                  >
+                    <svg
+                      class="size-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                    Preview
+                  </a>
+                )}
+              </article>
+
+              {proyecto.github && (
+                <a
+                  target="_blank"
+                  href={proyecto.github}
+                  class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+                >
+                  <svg
+                    class="size-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                  </svg>
+                  Code
+                </a>
+              )}
+            </section>
+          </section>
+        </article>
+      </>
+    ))
+  }
+</SectionContainer>
+<script>
+  const modal = document.querySelector("#modal-project");
+  const btnAbrir = document.querySelector("#btn-modal");
+  const btnCerrar = document.querySelector("#btn-cerrar-modal");
+
+  btnAbrir?.addEventListener("click", () => {
+    modal?.classList.remove("hidden");
+    btnAbrir?.classList.add("hidden");
+  });
+
+  btnCerrar?.addEventListener("click", () => {
+    modal?.classList.add("hidden");
+    btnAbrir?.classList.remove("hidden");
+  });
+</script>
 
 <style>
   @media (max-width: 768px) {
@@ -226,11 +357,6 @@ const PROJECTS = [
       gap: 10px;
       justify-content: center;
       align-items: center;
-    }
-
-    img {
-      width: 350px;
-      object-fit: contain;
     }
 
     p {

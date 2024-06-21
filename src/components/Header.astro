@@ -14,72 +14,85 @@
     <a class="text-xl hover:text-yellow-500" href="mailto:maurimr465@gmail.com"
       >Contacto</a
     >
+    <button id="darkMode" class="text-xl hover:text-yellow-500">
+      <img src="./Mas/sun.png" alt="imagen para light mode" class="w-6" />
+      <button></button>
 
-    <style>
-      @media (max-width: 768px) {
-        header {
-          width: 90%;
+      <style>
+        @media (max-width: 768px) {
+          header {
+            width: 90%;
+          }
+          nav {
+            padding: 0px;
+            gap: 12px;
+          }
+          nav a {
+            font-size: 8px;
+            padding: 0px;
+          }
         }
-        nav {
-          padding: 0px;
-          gap: 12px;
+      </style>
+
+      <script>
+        //Dark mode
+
+        const darkMode = document.querySelector("#darkMode")!;
+
+        darkMode.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+        });
+
+        const header = document.querySelector("header")!;
+        let scrollTimer = 0;
+
+        function cambiarColorEncabezado() {
+          if (window.scrollY > 0) {
+            header.style.backgroundColor = "#3182ce";
+
+            header.style.display = "flex";
+          } else {
+            header.style.backgroundColor = "transparent";
+            header.style.display = "flex";
+          }
         }
-        nav a {
-          font-size: 8px;
-          padding: 0px;
+
+        window.addEventListener("scroll", cambiarColorEncabezado);
+
+        function usuarioQuieto() {
+          header.style.display = "none";
         }
-      }
-    </style>
 
-    <script>
-      const header = document.querySelector("header")!;
-      let scrollTimer = 0;
-
-      function cambiarColorEncabezado() {
-        if (window.scrollY > 0) {
-          header.style.backgroundColor = "#3182ce";
-          header.style.display = "flex";
-        } else {
-          header.style.backgroundColor = "transparent";
-          header.style.display = "flex";
-        }
-      }
-
-      window.addEventListener("scroll", cambiarColorEncabezado);
-
-      function usuarioQuieto() {
-        header.style.display = "none";
-      }
-
-      window.addEventListener("scroll", () => {
-        cambiarColorEncabezado();
-        clearTimeout(scrollTimer);
-        window.scrollY > 25
-          ? (scrollTimer = setTimeout(usuarioQuieto, 2000))
-          : " ";
-      });
-
-      header.onmouseover = function () {
-        if ("onmouseover" in header) {
+        window.addEventListener("scroll", () => {
+          cambiarColorEncabezado();
           clearTimeout(scrollTimer);
-        }
-      };
+          window.scrollY > 25
+            ? (scrollTimer = setTimeout(usuarioQuieto, 2000))
+            : " ";
+        });
 
-      function userActive() {
-        if ("onmouseover" in header) {
-          header.onmouseover = function () {
+        header.onmouseover = function () {
+          if ("onmouseover" in header) {
             clearTimeout(scrollTimer);
-          };
+          }
+        };
 
-          header.onmouseout = function () {
-            window.scrollY > 25
-              ? (scrollTimer = setTimeout(usuarioQuieto, 1000))
-              : " ";
-          };
+        function userActive() {
+          if ("onmouseover" in header) {
+            header.onmouseover = function () {
+              clearTimeout(scrollTimer);
+            };
+
+            header.onmouseout = function () {
+              window.scrollY > 25
+                ? (scrollTimer = setTimeout(usuarioQuieto, 1000))
+                : " ";
+            };
+          }
         }
-      }
 
-      header.addEventListener("mouseover", userActive);
-    </script>
+        header.addEventListener("mouseover", userActive);
+      </script>
+    </button>
   </nav>
 </header>

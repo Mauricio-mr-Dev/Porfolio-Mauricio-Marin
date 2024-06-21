@@ -13,7 +13,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -22,7 +22,7 @@ const { description, title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="dark:bg-[#F0EFFD] dark:text-black \">
     <Header />
     <slot />
     <Footer />
@@ -52,6 +52,7 @@ const { description, title } = Astro.props;
       rgba(120, 119, 198, 0.3),
       rgba(255, 255, 255, 0)
     );
+    overflow-x: hidden
   }
 
   @media (prefers-reduced-motion: reduce) {

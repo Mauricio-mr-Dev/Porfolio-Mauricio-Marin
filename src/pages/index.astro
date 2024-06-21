@@ -27,10 +27,10 @@ import MiStack from "../components/MiStack.astro";
         alt="maurico marin foto"
       />
       <h1
-        class="text-white text-3xl mg:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+        class="text-white text-3xl mg:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 dark:text-customColor"
       >
         Hey, soy Mauricio <a
-          href="https://www.linkedin.com/in/mauricio-mar%C3%ADn-967a97265/"
+          href="mailto:maurimr465@gmail.com"
           target="_blank"
           class="flex justify-center items-center"
           rel="noopener"
@@ -38,17 +38,17 @@ import MiStack from "../components/MiStack.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-        <span class="text-yellow-200"
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] dark:text-customColor">
+        <span class="text-yellow-200 dark:text-[#EAB308] dark:font-semibold"
           >Soy un apasionado desarrollador frontend autodidacta</span
         >, especializado en la creación de experiencias web atractivas y
         funcionales. Disfruto convirtiendo ideas creativas en código eficiente y <span
-          class="text-yellow-200"
+          class="text-yellow-200 dark:text-[#EAB308] dark:font-semibold"
           >siempre estoy buscando oportunidades para aprender y mejorar mis
           habilidades</span
         >."
       </h2>
-      <nav class="flex gap-4 flex-wrap mt-8">
+      <nav class="flex gap-4 flex-wrap mt-8 ">
         <SocialPill
           href="https://www.linkedin.com/in/mauricio-mar%C3%ADn-967a97265/"
         >
@@ -60,21 +60,27 @@ import MiStack from "../components/MiStack.astro";
           <GitHub class="size-4 md:-size-6" />
           GitHub
         </SocialPill>
-        <SocialPill href="mailto:maurimr465@gmail.com" >
+        <SocialPill href="mailto:maurimr465@gmail.com">
           <Mail class="size-4 md:-size-6" />
           Contactame
         </SocialPill>
         <SocialPill href="./CV/cv.pdf" download>
-          <img src="./CV/icon-pdf.webp" alt="" class="size-5 bg-white md:-size-6">
+          <img
+            src="./CV/icon-pdf.webp"
+            alt=""
+            class="size-5 bg-white md:-size-6"
+          />
           Descargar CV
         </SocialPill>
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+    <SectionContainer id="experiencia  dark:text-customColor">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center dark:text-customColor"
+      >
         <Briefcase class="size-8" />
-        Experiencia en el Desarrollo Frontend
+        Experiencia
       </h2>
       <Experience />
     </SectionContainer>
@@ -93,8 +99,7 @@ import MiStack from "../components/MiStack.astro";
         Mi stack
       </h2>
 
-<MiStack/>
-
+      <MiStack />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

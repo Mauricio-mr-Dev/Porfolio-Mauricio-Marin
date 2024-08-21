@@ -10,7 +10,7 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import ReactRouter from "./icons/React-router.astro";
 import SectionContainer from "./SectionContainer.astro";
-import Mas from "./icons/Mas.astro";
+
 
 const TAGS = {
   HTML: {
@@ -229,8 +229,12 @@ const nextProyectos = PROJECTS.slice(3, PROJECTS.length);
   <img
     src="./Mas/mas.png"
     alt="imagen para mostrar mas proyectos"
-    class="w-8 lg:w-12"
+    class="w-8 lg:w-12 dark:hidden"
   />
+
+  <img src="./Mas/abrir_black.png" 
+  class="hidden dark:block w-8 lg:w-12"
+  alt="imagen para mostrar mas proyectos en modo claro">
 </button>
 
 <SectionContainer
@@ -251,7 +255,7 @@ const nextProyectos = PROJECTS.slice(3, PROJECTS.length);
           class="flex gap-x-8  mb-10 hover:scale-105 transition duration-1000 ease-out"
         >
           <img
-            class="w-[350px]  md:w-[450px] h-[350px] rounded-xl object-cover  transition duration-1000 ease-out "
+            class="w-[350px]  md:w-[450px] h-[235px] rounded-xl object-cover  transition duration-1000 ease-out "
             src={proyecto.image}
             alt={`Captura de pantalla del proyecto ${proyecto.title}`}
           />

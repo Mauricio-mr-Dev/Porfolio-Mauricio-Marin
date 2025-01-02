@@ -11,7 +11,6 @@ import Tailwind from "./icons/Tailwind.astro";
 import ReactRouter from "./icons/React-router.astro";
 import SectionContainer from "./SectionContainer.astro";
 
-
 const TAGS = {
   HTML: {
     name: "Html",
@@ -82,20 +81,29 @@ const PROJECTS = [
   {
     title: "Imys oficial WebSite",
     description:
-      "Para mi cartera, desarrollé un sitio web para una empresa de aire acondicionado como parte de un proyecto freelance. Me enfoqué en diseñar una experiencia de usuario atractiva y fácil de usar, especialmente en la parte responsive. Destacando los servicios y productos de la empresa,",
+      "Desarrollé un sitio web para una empresa de aire acondicionado como parte de un proyecto freelance. Me enfoqué en diseñar una experiencia de usuario atractiva y fácil de usar, especialmente en la parte responsive. Destacando los servicios y productos de la empresa,",
     image: "/projects/Imys.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
     verMas: "https://imys.mx",
   },
+
   {
-    title: "EL Paisa comidas rapidas",
+    title: "El Paisa comidas rapidas",
     description:
       "Es una plataforma de pedidos de comida rápida, Desarrollada con HTML, CSS y PHP,y MySQL, esta plataforma ofrece la posibilidad de registrarse, realizar pedidos y gestionarlos de manera eficiente. Con roles diferenciados entre usuarios y administradores. Esta fue desarrollada en un proyecto escolar.",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.MYSQL],
     image: "./projects/paisaComidas.webp",
     github: "https://github.com/Mauricio-mr-Dev/El-paisa-comidas-rapidas",
   },
-
+  {
+    title: "Red social IES CINOC",
+    description:
+      "Es una plataforma web desarrollada con React, Firebase y Tailwind CSS,Similar a X. El backend está implementado con Firebase, utilizando sus servicios de autenticación,base de datos en tiempo real (Firestore). Los usuarios pueden registrarse para crear publicaciones, subir imágenes, navegar por los perfiles de otras personas, explorar sus publicaciones y gestionar recordatorios personalizados.",
+    tags: [TAGS.REACT, TAGS.REACTROUTER, TAGS.FIREBASE, TAGS.TAILWIND],
+    image: "./projects/red-social.webp",
+    github: "https://github.com/Mauricio-mr-Dev/Red-social",
+    verMas: "https://red-social-ies.netlify.app/",
+  },
   {
     title: "IP geolocation",
     description:
@@ -126,8 +134,8 @@ const PROJECTS = [
   },
 ];
 
-const proyectos = PROJECTS.slice(0, 3);
-const nextProyectos = PROJECTS.slice(3, PROJECTS.length);
+const proyectos = PROJECTS.slice(0, 4);
+const nextProyectos = PROJECTS.slice(4, PROJECTS.length);
 ---
 
 {
@@ -232,9 +240,11 @@ const nextProyectos = PROJECTS.slice(3, PROJECTS.length);
     class="w-8 lg:w-12 dark:hidden"
   />
 
-  <img src="./Mas/abrir_black.png" 
-  class="hidden dark:block w-8 lg:w-12"
-  alt="imagen para mostrar mas proyectos en modo claro">
+  <img
+    src="./Mas/abrir_black.png"
+    class="hidden dark:block w-8 lg:w-12"
+    alt="imagen para mostrar mas proyectos en modo claro"
+  />
 </button>
 
 <SectionContainer

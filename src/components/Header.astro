@@ -4,9 +4,11 @@
 
 <header
   id="header"
-  class="flex z-10 justify-center items-center py-3 w-full xl:w-[880px] mx-auto bg-slate-600 rounded-full fixed top-5 left-0 right-0"
+  class="flex z-10 justify-center items-center p-y-3 w-full xl:w-[900px] mx-auto bg-slate-600 rounded-full fixed top-5 left-0 right-0"
 >
-  <nav class="flex flex-row gap-x-4 sm:gap-x-10">
+  <nav
+    class="flex flex-row gap-x-1 sm:gap-x-6 w-full justify-around p-3 items-center"
+  >
     <a class="text-xl hover:text-yellow-500" href="#">Inicio </a>
     <a class="text-xl hover:text-yellow-500" href="#experiencia">Experiencia</a>
     <a class="text-xl hover:text-yellow-500" href="#proyectos">Proyectos</a>
@@ -14,18 +16,17 @@
     <a class="text-xl hover:text-yellow-500" href="mailto:maurimr465@gmail.com"
       >Contacto</a
     >
-    <button id="darkMode" class="text-xl hover:text-yellow-500">
+    <button id="darkMode" class="text-xs hover:text-yellow-500">
       <img
         src="./Mode/sun.png"
         alt="imagen para light mode"
-        class="w-6 dark:hidden"
+        class="w-4 dark:hidden xl:w-6"
       />
       <img
         src="./Mode/moon.png"
         alt="Imagen para darkMode"
-        class="w-5 hidden dark:block"
+        class="w-3 hidden dark:block xl:w-6"
       />
-      <button></button>
 
       <style>
         @media (max-width: 768px) {
